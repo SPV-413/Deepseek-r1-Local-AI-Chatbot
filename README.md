@@ -14,7 +14,7 @@ This project showcases a locally hosted **AI chatbot built using Flowise AI and 
 ## Installation & Setup
 ### 1. Prerequisites
 Ensure you have the following installed:
-- Install PNPM
+- PNPM
 - Ollama (for managing local AI models)
 - DeepSeek-R1 model installed via Ollama
 
