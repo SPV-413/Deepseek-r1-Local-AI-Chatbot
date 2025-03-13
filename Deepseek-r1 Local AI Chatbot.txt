@@ -1,0 +1,11 @@
+Deploying the Deepseek-r1 Local AI Chatbot on a Website.
+
+To embed the chatbot into a website, add the following script anywhere in the <body> tag of your HTML file:
+
+<script type="module">
+    import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
+    Chatbot.init({
+        chatflowid: "aa5f0996-b5b0-42db-9350-090a2e3f2be8",
+        apiHost: "http://localhost:3000",
+    })
+</script>
