@@ -1,11 +1,34 @@
 Deploying the Deepseek-r1 Local AI Chatbot on a Website.
 
-To embed the chatbot into a website, add the following script anywhere in the <body> tag of your HTML file:
+Backend script of the chatbot:
 
 <script type="module">
     import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
     Chatbot.init({
         chatflowid: "aa5f0996-b5b0-42db-9350-090a2e3f2be8",
         apiHost: "http://localhost:3000",
+    })
+</script>
+
+NOTE:
+
+Since this chatbot runs locally, deploying it on a website requires exposing the API via a public server or tunneling service.
+Method 1: Deploying to a Cloud Server
+
+- Host the chatbot on AWS, Google Cloud, Azure, or a VPS.
+- Ensure the API is publicly accessible.
+
+Method 2: Using Ngrok for Temporary Exposure
+
+- Install Ngrok and run:
+  ngrok http 3000
+
+- Use the generated public URL in the following script:
+
+<script type="module">
+    import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
+    Chatbot.init({
+        chatflowid: "aa5f0996-b5b0-42db-9350-090a2e3f2be8",
+        apiHost: "https://your-ngrok-url.com",  // Replace with Ngrok public URL
     })
 </script>
