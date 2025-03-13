@@ -19,9 +19,9 @@ Ensure you have the following installed:
 - DeepSeek-R1 model installed via Ollama
 
 ### 2. Simple setup using PNPM:
-- Clone the repository
+- Clone the repository:
 git clone https://github.com/FlowiseAI/Flowise.git
-- Go into repository folder
+- Go into repository folder:
 cd Flowise
 - Install all dependencies of all modules:
 pnpm install
